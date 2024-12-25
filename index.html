@@ -35,6 +35,7 @@
     h1 {
       text-align: center;
       margin-bottom: 20px;
+      
     }
 
     input {
@@ -114,7 +115,9 @@
 <body>
   
   <div class="todo-container">
-    <h1 style="user-select: none; ">Todo<span style="color: #4ca6a4">-</span><span style="color: limegreen ">App</span></h1>
+    <h1 style="user-select: none; ">Todo<span style="color: #4ca6a4">-</span><span style="background: linear-gradient(90deg, #ff7b54, green);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;">List</span></h1>
     <input type="text" id="todo-input" placeholder="Enter your Text...."><br><br>
     
     <button id="add" onclick="addTodo()" style="width: 100%">Add</button><br>
