@@ -117,6 +117,58 @@
     <button id="add" onclick="addTodo()" style="width: 100%">Add</button><br>
     <ul id="todo-list"></ul><br>
   </div>
+
+  
+    <script>
+    function addTodo() {
+  const input = document.getElementById('todo-input');
+  const newTodo = input.value.trim();
+
+  if (newTodo === "") {
+    alert("Please Fiil the input filed."); 
+    return; 
+  }
+
+  
+  const li = document.createElement('li');
+
+  
+  const span = document.createElement('span');
+  span.textContent = newTodo;
+  li.appendChild(span);
+
+ 
+  const editButton = document.createElement('button');
+  editButton.id = 'edit';
+  editButton.innerHTML = '<i class="fa-solid fa-pen-to-square fa-fade"></i>'; 
+  editButton.onclick = function () {
+    if (span.isContentEditable) {
+      span.contentEditable = false; 
+      editButton.innerHTML = '<i class="fa-solid fa-pen-to-square fa-fade"></i>'; 
+    } else {
+      span.contentEditable = true; 
+      span.focus(); 
+      editButton.innerHTML = '<i class="fa-solid fa-floppy-disk"></i>'; 
+    }
+  };
+  li.appendChild(editButton);
+
+  
+  const deleteButton = document.createElement('button');
+  deleteButton.id = 'delete';
+  deleteButton.innerHTML = '<i class="fa-solid fa-trash fa-beat-fade"></i>';
+  deleteButton.onclick = function () {
+    li.remove(); 
+  };
+  li.appendChild(deleteButton);
+
+
+  document.getElementById('todo-list').appendChild(li);
+
+  input.value = '';
+}
+
+  </script>
   
 </body>
 </html>
