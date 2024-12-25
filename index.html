@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/9de09d3c34.js" crossorigin="anonymous"></script>
   <title> Todo App project </title>
-</head>
-  <style>
+<style>
     * {
       margin: 0;
       padding: 0;
@@ -17,16 +16,16 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f9;
-      display: flex;
+     display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
 
     .todo-container {
-      background-color: white;
+      background-color: #FFFFFF;
       padding: 20px;
-      border-radius: 8px;
+    border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 90%;
     }
@@ -47,16 +46,17 @@
 
     button {
       padding: 10px 15px;
-      background: linear-gradient(135deg, #117859, #4CDA52);
+      background: linear-gradient(135deg, #4BC254,#6EDF39, #0EFF27);
       border: none;
       color: white;
       border-radius: 4px;
       cursor: pointer;
+      user-select: none; 
     }
 
     button:hover {
       
-      background: linear-gradient(135deg, #CA091D, #2DBC33);
+      background: linear-gradient(135deg, #09CF0A, #46BE66, #0FFF19);
     }
 
     ul {
@@ -68,7 +68,7 @@
       display: flex;
       justify-content: space-between;
       padding: 8px;
-      background-color: #F9F9F9;
+      background-color: #f9f9f9;
       margin: 5px 0;
       border-radius: 4px;
     }
@@ -83,12 +83,13 @@
     }
 
     li button:hover {
-      background-color: #e55347;
+      background-color: #E55347;
     }
 
     li span {
       flex-grow: 1;
       text-align: left;
+      
       padding-right: 10px;
     }
 
@@ -108,18 +109,22 @@
     }
 
   </style>
+</head>
 <body>
   
   <div class="todo-container">
-    <h1> Todo <span style="color: green">App</span></h1>
-    <input type="text" id="todo-input" placeholder="Enter your Text!"><br><br>
+    <h1 style="user-select: none; "> Todo <span style="color: limegreen ">App</span></h1>
+    <input type="text" id="todo-input" placeholder="Enter your Text...."><br><br>
     
     <button id="add" onclick="addTodo()" style="width: 100%">Add</button><br>
     <ul id="todo-list"></ul><br>
   </div>
-
   
-    <script>
+  
+  
+  
+
+  <script>
     function addTodo() {
   const input = document.getElementById('todo-input');
   const newTodo = input.value.trim();
@@ -169,6 +174,8 @@
 }
 
   </script>
+  
+  
   
 </body>
 </html>
