@@ -7,6 +7,107 @@
   <script src="https://kit.fontawesome.com/9de09d3c34.js" crossorigin="anonymous"></script>
   <title> Todo App project </title>
 </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .todo-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #117859, #4CDA52);
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      
+      background: linear-gradient(135deg, #CA091D, #2DBC33);
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      background-color: #F9F9F9;
+      margin: 5px 0;
+      border-radius: 4px;
+    }
+
+    li button {
+      background-color: #FF6347;
+      border: none;
+      color: white;
+      cursor: pointer;
+      position: relative
+      
+    }
+
+    li button:hover {
+      background-color: #e55347;
+    }
+
+    li span {
+      flex-grow: 1;
+      text-align: left;
+      padding-right: 10px;
+    }
+
+    li span[contenteditable="true"] {
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 4px;
+      outline: none;
+    }
+    #edit{
+      left: -3%;
+      
+    }
+
+    #delete{
+      background-color: #CE3939;
+    }
+
+  </style>
 <body>
   
   <div class="todo-container">
